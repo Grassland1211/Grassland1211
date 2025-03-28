@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngôi Nhà Kỷ Niệm</title>
+    <style>
+        .content { display: none; }
+    </style>
+</head>
+<body>
+    <h1>Ngôi Nhà Kỷ Niệm</h1>
+    <ul>
+        <li><button onclick="toggleContent('floor1')">🏠 Tầng 1 - Kỷ Niệm Tuổi Thơ</button></li>
+        <li><button onclick="toggleContent('floor2')">🏠 Tầng 2 - Những Người Bạn</button></li>
+        <li><button onclick="toggleContent('floor3')">🏠 Tầng 3 - Ước Mơ Và Tương Lai</button></li>
+        <li><button onclick="toggleContent('garden')">🌳 Sân Vườn - Nơi Thư Giãn</button></li>
+    </ul>
+
+    <div id="floor1" class="content">Nội dung về tuổi thơ của mày nè...</div>
+    <div id="floor2" class="content">Viết về bạn bè, những người đã đến và đi...</div>
+    <div id="floor3" class="content">Những giấc mơ, hoài bão trong tương lai...</div>
+    <div id="garden" class="content">Sân vườn nơi thư giãn, chia sẻ cảm xúc...</div>
+
+    <script>
+        function toggleContent(id) {
+            let contents = document.querySelectorAll('.content');
+            contents.forEach(content => content.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
